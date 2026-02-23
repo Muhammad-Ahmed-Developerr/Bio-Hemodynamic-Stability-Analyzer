@@ -11,6 +11,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 from io import BytesIO
 
+
 # Page configuration
 st.set_page_config(
     page_title="Biomedical Hemodynamic Analyzer",
