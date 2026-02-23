@@ -1,108 +1,113 @@
-# 👁️ Bio-Eye Care Navigator
+# ❤️ Bio Hemodynamic Stability Analyzer
 
-> 🏥 Intelligent Ophthalmic Diagnosis & Visual Acuity Testing System
-> 🎓 CS-109 – Computer Programming | NED University of Engineering & Technology
-> 📅 Spring Semester 2026 | Batch 2025
+> 🏥 Intelligent Cardiovascular Monitoring & Risk Classification System
+> 🎓 CS-109 – Computer Programming | Biomedical Application
+> 📅 Spring Semester 2026
 
 ---
 
 ## 🚀 Overview
 
-**Bio-Eye Care Navigator** is a biomedical Streamlit-based web application designed to evaluate patient eye health using multi-parameter clinical logic.
+**Bio Hemodynamic Stability Analyzer** is a Streamlit-based biomedical application designed to evaluate cardiovascular stability using real-time clinical parameters.
 
-It analyzes:
+The system analyzes:
 
 * 👤 Patient Age
-* 👁️ Primary Symptom
-* 🔍 Visual Acuity (Snellen)
-* 📊 Intraocular Pressure (IOP)
-* 🧬 Family History
+* ❤️ Heart Rate (BPM)
+* 🩸 Systolic Blood Pressure
+* 🩸 Diastolic Blood Pressure
+* 🌡️ Oxygen Saturation (SpO₂)
+* 📊 Mean Arterial Pressure (MAP)
 
-The system then classifies the patient into:
+Based on these inputs, it classifies the patient into:
 
-* 🟢 Normal
-* 🟡 Abnormal
+* 🟢 Stable
+* 🟡 At Risk
 * 🔴 Critical
 
 And provides:
 
-* 🩺 Condition diagnosis
-* 👨‍⚕️ Specialist recommendation
-* 💡 Clinical reasoning
-* 📄 Downloadable reports (5 formats)
+* 🩺 Clinical condition assessment
+* 🚑 Emergency recommendation level
+* 📄 Downloadable diagnostic reports
+* 📊 Analytical visualizations
 
 ---
 
 ## ✨ Features
 
-### 📝 1. Smart Patient Diagnosis
+### 🧠 1. Multi-Parameter Cardiovascular Analysis
 
-* Multi-parameter clinical decision tree
-* Age-adjusted medical logic
-* IOP threshold analysis
-* Risk factor modification (family history)
-* Severity classification engine
-
----
-
-### 👓 2. Interactive Snellen Visual Acuity Test
-
-* Built-in Snellen chart
-* 20/20 to 20/200 grading
-* Automated interpretation
-* Personalized recommendations
+* Heart rate abnormality detection (Bradycardia / Tachycardia)
+* Blood pressure classification (Hypotension / Hypertension)
+* Oxygen desaturation detection
+* MAP auto-calculation
+* Severity-based risk engine
 
 ---
 
-### 📊 3. Patient History & Analytics Dashboard
+### 📊 2. Real-Time Calculations
 
-* Session-based patient record storage
-* Color-coded severity tracking
-* Summary metrics
-* Symptom distribution charts
-* Age analysis histogram
-* Severity breakdown pie chart
-* Export all records to CSV
+Mean Arterial Pressure is calculated using:
+
+```python
+MAP = (Systolic + 2 * Diastolic) / 3
+```
+
+System uses threshold-based clinical logic to detect instability.
+
+---
+
+### 📈 3. Interactive Dashboard
+
+* Patient history tracking (session-based)
+* Stability distribution charts
+* Heart rate trend visualization
+* Blood pressure comparison graph
+* Oxygen saturation insights
+* CSV export of all records
 
 ---
 
 ### 💾 4. Multi-Format Report Generation
 
-Each diagnosis can be exported as:
+Each patient assessment can be exported as:
 
-* 📄 TXT Report
+* 📄 TXT File
 * 📊 CSV File
-* 📑 PDF Document
+* 📑 PDF Report
 * 🖼️ PNG Image
 * 📸 JPG Image
 
 Reports include:
 
 * Timestamp
-* Patient information
-* Condition
-* Severity
-* Clinical reasons
-* Recommendations
+* All vitals
+* MAP value
+* Clinical interpretation
+* Stability classification
+* Medical recommendation
 
 ---
 
 ## 🧠 Clinical Logic Example
 
 ```python
-if symptom == "Flash of Light":
-    if age > 50 or eye_pressure > 21:
-        condition = "Retinal Detachment with Glaucoma Risk"
-        severity = "Critical"
+if heart_rate < 50 or spo2 < 90:
+    stability = "Critical"
+elif systolic < 90 or systolic > 180:
+    stability = "At Risk"
+else:
+    stability = "Stable"
 ```
 
-The application mimics real-world ophthalmic triage logic using:
+The decision engine uses:
 
-* ✔ Conditional statements (if / elif / else)
+* ✔ Nested conditional statements
 * ✔ Logical operators (and / or)
-* ✔ Threshold-based classification
-* ✔ Dictionary-based mapping
-* ✔ Multi-factor decision branching
+* ✔ Comparison operators
+* ✔ Mathematical formulas
+* ✔ Multi-variable risk scoring
 
 ---
 
@@ -110,58 +115,58 @@ The application mimics real-world ophthalmic triage logic using:
 
 | Technology    | Purpose                 |
 | ------------- | ----------------------- |
-| 🐍 Python     | Core Programming        |
+| 🐍 Python     | Core Logic              |
 | 🎨 Streamlit  | Web Interface           |
-| 📊 Pandas     | Data Handling           |
-| 📈 Matplotlib | Visualizations          |
-| 🖼️ PIL       | Image Report Generation |
-| 📑 FPDF       | PDF Report Creation     |
-| 🧮 NumPy      | Numerical Support       |
+| 📊 Pandas     | Data Management         |
+| 📈 Matplotlib | Charts & Graphs         |
+| 🧮 NumPy      | Calculations            |
+| 📑 FPDF       | PDF Reports             |
+| 🖼️ Pillow    | Image Report Generation |
 
 ---
 
 ## 📂 Project Structure
 
 ```
-Bio-Eye-Care-Navigator/
+Hemodynamic-Stability-Analyzer/
 │
-├── eye.py              # Main Application
+├── hemodynamic.py      # Main Application File
 ├── README.md           # Project Documentation
-└── requirements.txt    # Python Dependencies
+└── requirements.txt    # Dependencies
 ```
 
 ---
 
 ## ⚙️ Installation
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/bio-eye-care-navigator.git
-cd bio-eye-care-navigator
+git clone https://github.com/your-username/hemodynamic-analyzer.git
+cd hemodynamic-analyzer
 ```
 
-### 2️⃣ Install Dependencies
+### 2️⃣ Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or manually install:
+Or manually:
 
 ```bash
-pip install streamlit pandas numpy matplotlib seaborn pillow fpdf
+pip install streamlit pandas numpy matplotlib pillow fpdf
 ```
 
 ---
 
-## ▶️ Run the Application
+## ▶️ Run Application
 
 ```bash
-streamlit run eye.py
+streamlit run hemodynamic.py
 ```
 
-Then open your browser at:
+Open browser:
 
 ```
 http://localhost:8501
@@ -169,77 +174,70 @@ http://localhost:8501
 
 ---
 
-## 📊 Assignment Requirements Coverage
+## 📊 Assignment Coverage
 
-| Requirement            | Implementation                               |
-| ---------------------- | -------------------------------------------- |
-| Input Design           | Text input, slider, selectbox, radio buttons |
-| Processing Logic       | Multi-parameter decision tree                |
-| Conditional Statements | Nested if/elif logic                         |
-| Operators              | Logical & comparison operators               |
-| Data Structures        | Lists & Dictionaries                         |
-| Modular Design         | 10+ user-defined functions                   |
-| Output Design          | Styled UI + Reports + Charts                 |
+| Requirement          | Implementation                       |
+| -------------------- | ------------------------------------ |
+| Input Design         | Sliders, number inputs, select boxes |
+| Conditional Logic    | Multi-branch clinical decision tree  |
+| Mathematical Formula | MAP Calculation                      |
+| Data Structures      | Lists & Dictionaries                 |
+| Modular Programming  | Multiple user-defined functions      |
+| Data Visualization   | Charts & Graphs                      |
+| File Handling        | Multi-format report export           |
 
 ---
 
-## 📈 Analytics Capabilities
+## 📈 Analytical Capabilities
 
-* Real-time patient tracking
-* Severity metrics
-* Symptom frequency analysis
-* Age distribution insights
-* CSV export of entire database
+* Stability distribution metrics
+* Heart rate abnormality detection
+* Blood pressure trend monitoring
+* Oxygen saturation alerts
+* Exportable dataset
 
 ---
 
 ## 🔒 Disclaimer
 
-This is a **computer-assisted clinical decision support system** developed for academic purposes.
+This system is developed for academic and educational purposes.
 
-It does NOT replace professional medical consultation.
+It does NOT replace real-time medical supervision or professional healthcare diagnosis.
 
-Always consult a qualified ophthalmologist for diagnosis and treatment.
+In emergency situations, contact medical services immediately.
 
 ---
 
-## 👨‍💻 Developed For
+## 👨‍💻 Academic Context
 
 **Course:** CS-109 Computer Programming
-**Domain:** Biomedical Application
-**University:** NED University of Engineering & Technology
+**Domain:** Biomedical Systems
 **Semester:** Spring 2026
 
 ---
 
-## 🌟 Key Highlights
+## 🌟 Key Strengths
 
-* 🔥 Clean UI with custom CSS styling
-* 🧠 Realistic medical decision modeling
-* 📊 Integrated analytics dashboard
+* 🔥 Clinical-style decision modeling
+* 📊 Real-time calculation engine
+* 💡 Clear severity classification
 * 📁 Professional report generation
-* 🎯 Fully modular and scalable design
+* ⚡ Modular and scalable architecture
 
 ---
 
-## 📌 Future Improvements
+## 📌 Future Enhancements
 
 * Database integration (MongoDB / PostgreSQL)
-* Authentication system
-* Real patient record persistence
-* AI-based predictive modeling
-* Deployment on Streamlit Cloud / AWS
+* Real-time IoT sensor integration
+* AI-based cardiovascular risk prediction
+* Cloud deployment
+* Multi-user authentication system
 
 ---
 
-## ⭐ If You Like This Project
+# ❤️ Bio Hemodynamic Stability Analyzer
 
-Give it a ⭐ on GitHub and share it with others!
+### Intelligent Cardiovascular Monitoring System
 
----
-
-# 👁️ Bio-Eye Care Navigator
-
-### Intelligent Eye Health Evaluation System
-
-Built with precision. Designed with logic. Powered by Python.
+Built with logic. Designed for precision. Powered by Python.
