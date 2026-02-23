@@ -4,6 +4,8 @@
 > 🎓 CS-109 – Computer Programming | Biomedical Application
 > 📅 Spring Semester 2026
 
+🔗 **Live App:** [https://bio-hemodynamic-stability-analyzer.streamlit.app/](https://bio-hemodynamic-stability-analyzer.streamlit.app/)
+
 ---
 
 ## 🚀 Overview
@@ -142,8 +144,8 @@ Hemodynamic-Stability-Analyzer/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/hemodynamic-analyzer.git
-cd hemodynamic-analyzer
+git clone https://github.com/muhammad-ahmed-developerr/Bio-Hemodynamic-Stability-Analyzer.git
+cd Bio-Hemodynamic-Stability-Analyzer
 ```
 
 ### 2️⃣ Install Requirements
@@ -163,7 +165,7 @@ pip install streamlit pandas numpy matplotlib pillow fpdf
 ## ▶️ Run Application
 
 ```bash
-streamlit run hemodynamic.py
+streamlit run bio-hemodynamic-stability-analyzer.py
 ```
 
 Open browser:
