@@ -1,0 +1,13 @@
+Parameter,Value,Status,Normal Range,Unit
+Patient ID,PAT-0003,,,
+Patient Name,Ahmed,,,
+Timestamp,2026-07-01 18:06:30,,,
+Age,19,,,years
+Heart Rate,55,LOW,60-100,BPM
+Systolic BP,300,,90-140,mmHg
+Diastolic BP,23,,60-90,mmHg
+MAP,115.33,HIGH,70-100,mmHg
+Shock Index,0.18,LOW,0.5-0.7,
+Pulse Pressure,277,,30-50,mmHg
+RPP,16500,,<10000,
+Overall Status,ABNORMAL,,,
